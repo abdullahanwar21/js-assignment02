@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userName = prompt("Please Enter Your Username");
+        let asciiChar = String.fromCharCode(userName.indexOf(64, 33, 44, 46));
+        // let res = userName.codePointAt(asciiChar)
+        console.log(asciiChar);
+        for(let i = 0 ; i < userName.length ; i++){
+            console.log(userName.slice(0,0));       
+        }
+
+        // switch (userName) {
+        //     case String.fromCharCode(33):
+        //         document.write(String.fromCharCode(33) + "Please ENter Valid UName")
+        //         break;
+        //     case String.fromCharCode(44):
+        //         alert(String.fromCharCode(44), "Please ENter Valid UName")
+        //         break;
+        //     case String.fromCharCode(46):
+        //         alert(String.fromCharCode(46), "Please ENter Valid UName")
+        //         break;
+        //     case String.fromCharCode(64):
+        //     document.write(String.fromCharCode(64) , "Please ENter Valid UName")
+        //         break;
+        //         default :
+        //         console.log("object");
+        //         break;
+        // }
+
+        // if(userName === strToCodeChar.charCodeAt(64) ){
+        //     console.log("object");
+        // }
+        // console.log(strToCodeChar); // 64
+
+        // console.log(strToCodeChar.codePointAt(strToCodeChar));
+
+        // switch (userName) {
+        //     case strToCodeChar.charCodeAt(strToCodeChar):
+        //         alert(`please Enter Valid Username: ${userName.charCodeAt(33)}`)
+        //         break;
+        // }
+        // console.log(userName.codePointAt(0));
+    </script>
+</body>
+
+</html>
