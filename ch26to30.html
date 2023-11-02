@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 26 TO 30</title>
+  </head>
+  <body>
+    <script>
+      // Q-1
+      document.write(`Q-1 Write a program that takes a positive integer from user &
+      display the following in your browser.
+      a. number
+      b. round off value of the number
+      c. floor value of the number
+      d. ceil value of the number <br><br>`);
+      let number = 3.45214;
+      document.write(`<b>Number :  ${number} </b> <br>`);
+      document.write(`<b>Round Off Value : ${Math.round(number)} </b> <br>`);
+      document.write(`<b>Floor Value : ${Math.floor(number)} </b> <br>`);
+      document.write(`<b>Ciel Value : ${Math.ceil(number)} </b> <br>`);
+      document.write("<br> <hr>");
+
+      // Q-2
+      document.write(`Q-2 Write a program that takes a negative floating point
+      number from user & display the following in your browser.
+      a. number
+      b. round off value of the number
+      c. floor value of the number
+      d. ceil value of the number <br><br>`);
+      let negativeNum = +prompt("Enter Negative Number e.g -2.673");
+      document.write(`<b>Number :  ${negativeNum} </b> <br>`);
+      document.write(
+        `<b>Round Off Value : ${Math.round(negativeNum)} </b> <br>`
+      );
+      document.write(`<b>Floor Value : ${Math.floor(negativeNum)} </b> <br>`);
+      document.write(`<b>Ceil Value : ${Math.ceil(negativeNum)} </b> <br>`);
+      document.write("<br> <hr>");
+
+      // Q-3
+      document.write(`Q-3 Write a program that displays the absolute value of a
+      number.<br><br>`);
+        let num = prompt("Enter a number i\"ll show you Absolute Number : ");
+        let abs = Math.abs(num);
+        document.write("The absolute value of " + num + " is " + abs + "<br>");
+        document.write("<br><hr>");
+
+      // Q-4
+      document.write(`Q-4  Write a program that simulates a dice using random() 
+        method of JS Math class. Display the value of dice in your 
+        browser.<br><br>`);
+      let diceBtn = document.createElement("button");
+      diceBtn.innerHTML = "Dice Me!";
+      document.body.appendChild(diceBtn);
+      let h3 = document.createElement("h3");
+      document.body.appendChild(h3);
+      console.log(diceBtn);
+      diceBtn.addEventListener("click", function () {
+        function diceMe() {
+          let dice1 = Math.floor(Math.random() * 6) + 1;
+          h3.innerHTML = "Random Dice Value : " + dice1;
+        }
+        diceMe();
+      });
+      document.write("<br><hr>");
+
+      // Q-5
+      document.write(`Q-5   Write a program that simulates a coin toss using random()
+          method of JS Math class. Display the value of coin in your
+          browser.<br><br>`);
+      let h2 = document.createElement("h2");
+      document.body.appendChild(h2);
+      let headOrTail = document.createElement("button");
+      headOrTail.innerHTML = "Head Or Tail";
+      document.body.appendChild(headOrTail);
+      headOrTail.addEventListener("click", function () {
+        let coins = Math.floor(Math.random() * 2) + 1;
+        let answer;
+        if (coins === 2) {
+          console.log("Heads");
+          answer = "Heads";
+          h2.innerHTML = "Random Coin Values : " + answer;
+        } else {
+          answer = "Tails";
+          h2.innerHTML ="Random Coin Values : " + answer;
+        }
+        console.log(h2);
+      });
+      document.write("<br><hr>");
+
+      // Q-6
+      document.write(`Q-6   Write a program that shows a random number between 1 
+      and 100 in your browser..<br><br>`);
+      let h4 = document.createElement("h4");
+      document.body.appendChild(h4);
+      let randNum = Math.floor(Math.random() * 100) + 1;
+      h4.innerHTML = `Random Number Between 1 And 100 is ${randNum} :`;
+      document.write("<br><hr>");
+
+      // Q-8
+      document.write(`Q-8 Write a program that shows a random number between 1 
+      and 100 in your browser..<br><br>`);
+      function userGuessNumber(){
+        let inputUser = +prompt("Guess The Number between 1 to 10");
+        let secretNum = Math.floor(Math.random() * 10) + 1;
+        if(inputUser === secretNum){
+          document.write(`Congratulations You Guesses ${inputUser} Right ${secretNum} `)
+        } else {
+          document.write(`Try Again ${inputUser} Not Same : ${secretNum} `)
+          
+        }
+       
+      }
+      userGuessNumber();
+</script>
+  </body>
+</html>

@@ -1,170 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <h1 align="center">String Method's</h1>
-    <br>
+    <br />
     <script>
-        //  Q-1
-        document.write(`<h3>Q-1 ask first & last name and merge them  with Full Name & greet user!!</h3>`);
-        let firstName = prompt("Enter Your First Name!");
-        let lastName = prompt("Enter Your Last Name!");
-        document.write("Hello " + firstName.concat(lastName) + "<br>")
-        document.write("<br><br><hr>");
-        //  Q-2
-        document.write(`<h3>Q-2Write a program to take a user input about his favorite
+      //  Q-1
+      document.write(
+        `<h3>Q-1 ask first & last name and merge them  with Full Name & greet user!!</h3>`
+      );
+      let firstName = prompt("Enter Your First Name!");
+      let lastName = prompt("Enter Your Last Name!");
+      document.write("Hello " + firstName.concat(lastName) + "<br>");
+      document.write("<br><br><hr>");
+      //  Q-2
+      document.write(`<h3>Q-2Write a program to take a user input about his favorite
         mobile phone model. Find and display the length of user input in your browser!!</h3>`);
-        let fvrtMob = prompt("ENter Your Favourate Mobile Model !");
-        document.write("Your Favorate Mobile Model is : " + fvrtMob + "<br>");
-        document.write("Length OF STring :  " + fvrtMob.length + "<br>");
-        document.write("<br><br><hr>");
+      let fvrtMob = prompt("ENter Your Favourate Mobile Model !");
+      document.write("Your Favorate Mobile Model is : " + fvrtMob + "<br>");
+      document.write("Length OF STring :  " + fvrtMob.length + "<br>");
+      document.write("<br><br><hr>");
 
-        // Q-3
-        document.write(`<h3>Q-3 Write a program to find the index of letter “n” in the word
+      // Q-3
+      document.write(`<h3>Q-3 Write a program to find the index of letter “n” in the word
 “Pakistani” and display the result in your browser .!!</h3>`);
-        let pakStr = "Pakistan";
-        document.write("String :", pakStr, "<br>");
-        document.write("Index of 'n' :", pakStr.indexOf("n"), "<br>");
-        document.write("<br><br><hr>");
+      let pakStr = "Pakistan";
+      document.write("String :", pakStr, "<br>");
+      document.write("Index of 'n' :", pakStr.indexOf("n"), "<br>");
+      document.write("<br><br><hr>");
 
-        // Q-4
-        document.write(`<h3>Q-4Write a program to find the last index of letter “l” in the
+      // Q-4
+      document.write(`<h3>Q-4Write a program to find the last index of letter “l” in the
         word “Hello World” and display the result in your browser.!!</h3>`);
-        let str = "Hello World";
-        document.write("String :", str, "<br>");
-        document.write("Last Index of 'l' :", str.lastIndexOf("l"), "<br>");
-        document.write("<br><br><hr>");
+      let str = "Hello World";
+      document.write("String :", str, "<br>");
+      document.write("Last Index of 'l' :", str.lastIndexOf("l"), "<br>");
+      document.write("<br><br><hr>");
 
-        // Q-5
-        document.write(`<h3>Q-5Write a program to find the character at 3rd index in the
+      // Q-5
+      document.write(`<h3>Q-5Write a program to find the character at 3rd index in the
         word “Pakistani” and display the result in your browser.!!</h3>`);
-        let str2 = "pakistan";
-        document.write("String :", str2, "<br>");
-        document.write("Character At index 3 : ", str2.charAt(3), "<br>");
-        document.write("<br><br><hr>");
+      let str2 = "pakistan";
+      document.write("String :", str2, "<br>");
+      document.write("Character At index 3 : ", str2.charAt(3), "<br>");
+      document.write("<br><br><hr>");
 
-        // !Note! # I skip the question number6 because i already did in one place
+      // !Note! # I skip the question number6 because i already did in one place
 
-        // Q-7
-        document.write(`<h3>Q-7 Write a program to replace the “Hyder” to “Islam” in the
+      // Q-7
+      document.write(`<h3>Q-7 Write a program to replace the “Hyder” to “Islam” in the
             word “Hyderabad” and display the result in your browser.!!</h3>`);
-        let cityName = "hyderabad";
-        let letsReplace = cityName.replace("hyder", "islam");
-        document.write("City : ", cityName, "<br>");
-        document.write("After Replacement : ", letsReplace, "<br>");
-        document.write("<br><br><hr>");
+      let cityName = "hyderabad";
+      let letsReplace = cityName.replace("hyder", "islam");
+      document.write("City : ", cityName, "<br>");
+      document.write("After Replacement : ", letsReplace, "<br>");
+      document.write("<br><br><hr>");
 
-        // Q-8
-        document.write(`<h3>Q-8 Write a program to replace all occurrences of “and” in the
+      // Q-8
+      document.write(`<h3>Q-8 Write a program to replace all occurrences of “and” in the
                 string with “&” and display the result in your browser.!!</h3>`);
-        let message = " Ali and Sami are best friends. They play cricket and football together";
-        let replaceAllTheEnd = message.replaceAll("and", "&");
-        document.write("The Real message with and :", message, "<br>")
-        document.write("The word replace and  with & : ", replaceAllTheEnd, "<br>")
-        document.write("<br><br><hr>");
+      let message =
+        " Ali and Sami are best friends. They play cricket and football together";
+      let replaceAllTheEnd = message.replaceAll("and", "&");
+      document.write("The Real message with and :", message, "<br>");
+      document.write(
+        "The word replace and  with & : ",
+        replaceAllTheEnd,
+        "<br>"
+      );
+      document.write("<br><br><hr>");
 
-        // Q-9
-        document.write(`<h3>Q-9 Write a program that converts a string “472” to a number 472. Display the values & types in your browser.!!</h3>`);
-        let strToNum = "472";
-        document.write("Value : ", strToNum, "<br>");
-        document.write("Type : ", typeof strToNum, "<br>");
-        document.write("Value : ", strToNum, "<br>");
-        document.write("Type : ", typeof Number(strToNum), "<br>");
-        document.write("<br><br><hr>");
+      // Q-9
+      document.write(
+        `<h3>Q-9 Write a program that converts a string “472” to a number 472. Display the values & types in your browser.!!</h3>`
+      );
+      let strToNum = "472";
+      document.write("Value : ", strToNum, "<br>");
+      document.write("Type : ", typeof strToNum, "<br>");
+      document.write("Value : ", strToNum, "<br>");
+      document.write("Type : ", typeof Number(strToNum), "<br>");
+      document.write("<br><br><hr>");
 
-        // Q-10
-        document.write(`<h3>Q-10 Write a program that takes user input. Convert and
+      // Q-10
+      document.write(`<h3>Q-10 Write a program that takes user input. Convert and
         show the input in capital letters..!!</h3>`);
-        let userInputToUpperCase = prompt("Enter Some word");
-        document.write("User Input : ", userInputToUpperCase, "<br>");
-        document.write("Upper Case : ", userInputToUpperCase.toUpperCase(), "<br>");
-        document.write("<br><br><hr>");
+      let userInputToUpperCase = prompt("Enter Some word i\"ll show you Upper Case");
+      document.write("User Input : ", userInputToUpperCase, "<br>");
+      document.write(
+        "Upper Case : ",
+        userInputToUpperCase.toUpperCase(),
+        "<br>"
+      );
+      document.write("<br><br><hr>");
 
-        // Q-11
-        document.write(`<h3>Q-11 Write a program that takes user input. Convert and
+      // Q-11
+      document.write(`<h3>Q-11 Write a program that takes user input. Convert and
         show the input in title case.!!</h3>`);
+      let askUser = prompt('Enter word i"ll show You Title Case !!');
+      document.write(`User Input : ${askUser} </br>`);
+      function titleCase(string) {
+        let sentence = string.toLowerCase().split(" ");
+        for (let i = 0; i < sentence.length; i++) {
+          sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+        }
+        document.write("Title Case : " + sentence.join(" "));
+        return sentence;
+      }
 
-        // let userInputToTitilCase = prompt("Enter Some word convert we will convert it into title case");
+      titleCase(askUser);
+      document.write("<br><br><hr>");
 
-        // document.write("User Input : ", userInputToTitilCase, "<br>");
-        // document.write("Upper Case : ", userInputToUpperCase.charAt(0).slice(1).toUpperCase() , "<br>");
-        document.write("<br><br><hr>");
-
-        // Q-12
-        document.write(`<h3>Q-12 Write a program that converts the variable num to
+      // Q-12
+      document.write(`<h3>Q-12 Write a program that converts the variable num to
         string.!!</h3>`);
-        let num = 35.36;
-        let numToStr = String(num)
-        document.write("Number : ", num, "<br>");
-        document.write("Result : ", Math.trunc(numToStr), "<br>");
-        // document.write("Result : ", numToStr.replace(".",numToStr.slice(2,2)) , "<br>");
-        document.write("Type  : ", typeof numToStr, "<br>");
-        document.write("<br><br><hr>");
+      let num = 35.36;
+      let numToStr = String(num);
+      document.write("Number : ", num, "<br>");
+      document.write("Result : ", numToStr.replace(".", ""), "<br>");
+      // document.write("Result : ", numToStr.replace(".",numToStr.slice(2,2)) , "<br>");
+      document.write("Type  : ", typeof numToStr, "<br>");
+      document.write("<br><br><hr>");
 
-        // Q-13
-        document.write(`<h3>Q-13 Write a program to take user input and store username
-in a variable. If the username contains any special symbol
-among [@ . , !], prompt the user to enter a valid username.
-For character codes of [@ .</h3>`);
+      // Q-13
+      document.write(`<h3>Q-13 Write a program to take user input and store username
+      in a variable. If the username contains any special symbol
+      among [@ . , !], prompt the user to enter a valid username.
+      For character codes of [@ .</h3>`);
+      let userName = prompt(
+        "Please Enter Your Username Don't Use(@ , . !) Symbol"
+      );
+      let asciiChar = String.fromCharCode(64, 33, 44, 46);
 
-        // let userName = prompt("Please Enter Your Username");
-        // let strToCodeChar = userName.codePointAt(0);
-        // console.log(strToCodeChar);
-        //     console.log(strToCodeChar.codePointAt(strToCodeChar ));
-        // switch (userName) {
-        //     case strToCodeChar.charCodeAt(64):
-        //         alert(`please Enter Valid Username: ${userName.charCodeAt(33)}`)
-        //         break;
-        // }
-        // console.log(userName.codePointAt(0));
-        // document.write("Number : ", num, "<br>");
-        // document.write("Result : ", Math.trunc(numToStr), "<br>");
-        // // document.write("Result : ", numToStr.replace(".",numToStr.slice(2,2)) , "<br>");
-        // document.write("Type  : ", typeof numToStr, "<br>");
-        document.write("<br><br><hr>");
+      asciiChar = asciiChar.split("");
+      for (let i = 0; i < userName.length; i++) {
+        // console.log(userName);
+        console.log(userName[i]);
+        for (const item2 of asciiChar) {
+          if (userName[i] == item2) {
+            alert(`CM${item2}D Is Not Valid ${item2}`);
+            userName = prompt("Enter Your User Name");
+          }
+        }
+      }
+      document.write("username :", userName, "<br>");
+      document.write("<br><br><hr>");
+      // Q-14
+      document.write(`<h3>Q-14 You have an array
+      A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+      Write  program to enable “search by user input” in an 
+      array. After searching, prompt the user whether the given 
+      item is found in the list or not.
+      Note: Perform case insensitive search. Whether the user 
+      enters cookie, Cookie, COOKIE or coOkIE, program 
+      should inform about its availability. Example.</h3>`);
+      function searchArray() {
+        let bakeryItem = ["cake", "apple pie", "cookie", "chips", "patties"];
+        let userInput = prompt(`Enter an item to search("cake", "apple pie", "cookie", "chips", "patties"): `);
+        let found = false;
+        for (let i = 0; i < bakeryItem.length; i++) {
+          if (bakeryItem[i].toLowerCase() === userInput.toLowerCase()) {
+            found = true;
+            alert(`${userInput}  is available in the list at index ${i + 1} `);
+            document.write(`${userInput}  is available in the list at index ${i + 1} <br>`)
+            break;
+          }
+        }
+        if (!found) {
+          alert(userInput + " is not available in the list.");
+          document.write(userInput + " is not available in the list.<br>");
+        }
+      }
+      searchArray();
+      document.write("<br><br><hr>");
 
-        // Q-18
-        document.write(`<h3>Q-18 You have a string “The quick brown fox jumps the over the
+      // Q-15
+      document.write(`<h3>Q-15 Write a program to take password as an input from 
+      user. The password must qualify these requirements:
+      a. It should contain alphabets and numbers
+      b. It should not start with a number
+      c. It must at least 6 characters long
+      If the password does not meet above requirements,
+      prompt the user to enter a valid password.
+      For character codes of a-z, A-Z & 0-9, refer to ASCII
+      table at the end of this document..</h3>`);
+      function validatePassword() {
+        let password = prompt("Enter your password: must be 6 character ");
+        let regex = /^[a-zA-Z][a-zA-Z0-9]{5,}$/;
+        if (regex.test(password)) {
+          alert("Valid password!");
+        } else {
+          alert("Invalid password. Please enter a valid password.");
+        }
+      }
+      validatePassword();
+      document.write("<br><br><hr>");
+
+      // Q-16
+      document.write(`<h3>Q-16 Write a program to convert the following string to an
+      array using string split method.</h3>`);
+      let strToArray = "Karachi University";
+      strToArray = strToArray.split("");
+      for (const elem of strToArray) {
+        document.write(`${elem}<br>`);
+      }
+      document.write("<br><br><hr>");
+
+      // Q-17
+      document.write(`<h3>Q-17 Write a program to display the last character of a user
+      input..</h3>`);
+
+      let usrInput = prompt('ENter The Word i"ll show You Last Charcter');
+      document.write(`User Input :  ${usrInput} <br>`);
+      document.write(`Last Character Of Input :  ${usrInput.slice(-1)} <br>`);
+      document.write("<br><br><hr>");
+
+      // Q-18
+      document.write(`<h3>Q-18 You have a string “The quick brown fox jumps the over the
             lazy dog”. Write a program to count number of
             occurrences of word “the” in given string..</h3>`);
-        let theString = "The quick brown fox jumps over the lazy dog.";
-        // we should convert our sentence into lowercase
-        theString = theString.toLowerCase();
-        function countRepeatedWords(sentence) {
-            // String(sentence).toLowerCase();
-            // Step-1 string into Array
-            let theString = sentence.split(" ");
-            // Step-2 Create Empty Object
-            let wordMap = {};
-            // Step-3 Iterate the value of split array in Empty Object
-            for (let i = 0; i < theString.length; i++) {
-                let currentWordCount = wordMap[theString[i]];
-                // Step-4  ternary operator to check if loop iterate and the same word find then add one each iteration otherwise 0
-                let count = currentWordCount ? currentWordCount : 0;
+      let theString = "The quick brown fox jumps over the lazy dog.";
+      // we should convert our sentence into lowercase
+      theString = theString.toLowerCase();
+      function countRepeatedWords(sentence) {
+        // Step-1 string into Array
+        let theString = sentence.split(" ");
+        // Step-2 Create Empty Object
+        let wordMap = {};
+        // Step-3 Iterate the value of split array in Empty Object
+        for (let i = 0; i < theString.length; i++) {
+          let currentWordCount = wordMap[theString[i]];
+          // Step-4  ternary operator to check if loop iterate and the same word find then add one each iteration otherwise 0
+          let count = currentWordCount ? currentWordCount : 0;
 
-                wordMap[theString[i]] = count + 1;
-            }
-            // Step-5 Returning our end result bcz all the words now object keys with their counting Quantity if the is available two times e.g the:2
-            return wordMap;
-
+          wordMap[theString[i]] = count + 1;
         }
-        // Step-6 Calling The Function
-        let counting = countRepeatedWords(theString);
-        // Step-7 Just Searching "the" word how many times we have our sentence.
-        // its return the counting value 2
-        let res = counting["the"];
-        document.write(`Text :  ${theString} <br>`);
-        document.write(`There Are ${res} Occurance(s) of Word "the" <br>`);
-        document.write("<br><br><hr>");
-
+        // Step-5 Returning our end result bcz all the words now object keys with their counting Quantity if the is available two times e.g the:2
+        return wordMap;
+      }
+      // Step-6 Calling The Function
+      let counting = countRepeatedWords(theString);
+      // Step-7 Just Searching "the" word how many times we have our sentence.
+      // its return the counting value 2
+      let res = counting["the"];
+      document.write(`Text :  ${theString} <br>`);
+      document.write(`There Are ${res} Occurance(s) of Word "the" <br>`);
+      document.write("<br><br><hr>");
     </script>
-</body>
-
+  </body>
 </html>
