@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 35 to 38</title>
+  </head>
+  <body>
+    <h1>Function's</h1>
+    <script>
+      // Q-1
+      document.write(
+        `Q-1   Write a function that displays current date & time in your browser.<br><br>`
+      );
+      function createDate() {
+        return new Date();
+      }
+      document.write("<b>" + createDate() + "</b>");
+      console.log();
+      document.write(`<br><hr><br>`);
+
+      // Q-2
+      document.write(
+        `Q-2  Write a function that takes first & last name and then it greets the user using his full name.<br><br>`
+      );
+      let firstName = "Abdullah";
+      document.write(`The First Name is <b> ${firstName} </b></br>`);
+      let lastName = "Anwar";
+      document.write(`The Last Name is <b> ${lastName} </b></br>`);
+      function greeting() {
+        let fullName = firstName.concat(lastName);
+        return document.write(`<b>Hello Dear : ${fullName} </b> <br>`);
+      }
+      greeting();
+      document.write(`<br><hr><br>`);
+
+      // Q-3
+      document.write(`Q-3  Write a function that adds two numbers (input by user) 
+        and returns the sum of two numbers..<br><br>`);
+      let firstNum = 90;
+      document.write(`The First value : <b> ${firstNum} </b></br>`);
+      let lastNum = 110;
+      document.write(`The Last Name is <b> ${lastNum} </b></br>`);
+      function sum() {
+        return firstNum + lastNum;
+      }
+      document.write(`Sum of <b> ${firstNum} + ${lastNum} </b> = `, sum());
+      document.write(`<br><hr><br>`);
+
+      // Q-4
+      document.write(`Q-4 Write a function that takes three arguments num1, num2 
+        & operator & compute the desired operation. Return and 
+        show the desired result in your browser<br><br>`);
+      let num1 = +prompt("ENter Number one for calculation with number two");
+      let num2 = +prompt("ENter Number Two for calculation with number One");
+      let operator = prompt("Enter Operator - + * / ");
+      function compute(num1, num2, operator) {
+        let result;
+        switch (operator) {
+          case "+":
+            result = num1 + num2;
+            break;
+          case "-":
+            result = num1 - num2;
+            break;
+          case "*":
+            result = num1 * num2;
+            break;
+          case "/":
+            result = num1 / num2;
+            break;
+          default:
+            document.write("Invalid operator");
+        }
+        document.write(`Result : ${num1} ${operator} ${num2} = ${result}`);
+      }
+      compute(num1, num2, operator);
+
+      document.write(`<br><hr><br>`);
+
+      // Q-5
+      document.write(`Q-5 Write a function that squares its argument.<br><br>`);
+      let numSqr = +prompt('Enter Number i"ll show its square root');
+      function anyNumSqr(numSqr) {
+        return numSqr * numSqr;
+      }
+      document.write(
+        `The Square Root of : <b> ${numSqr} </b> </br> The Square root : `,
+        anyNumSqr(numSqr)
+      );
+
+      document.write(`<br><hr><br>`);
+
+      // Q-6
+      document.write(
+        `Q-6 Write a function that computes factorial of a number<br><br>`
+      );
+      let num = +prompt("Enter Number to see its factorial");
+      function factorial(num) {
+        if (num < 0) {
+          document.write(
+            "Error! Factorial for negative number does not exist."
+          );
+          return;
+        }
+        let result = 1;
+        for (let i = num; i > 0; i--) {
+          result *= i;
+        }
+        document.write(`The factorial of ${num} is ${result}.`);
+      }
+      factorial(num);
+
+      document.write(`<br><hr><br>`);
+
+      // Q-7
+      document.write(
+        `Q-7  Write a function that take start and end number as inputs 
+        & display counting in your browser.<br><br>`
+      );
+      let startingNum = 45;
+      document.write(`The Starting Number : <b> ${startingNum} </b></br>`);
+      let endingNum = 58;
+      document.write(`The Last Name is <b> ${endingNum} </b></br>`);
+      function count(startNum, endNum) {
+        for (let i = startNum; i <= endNum; i++) {
+          document.write(i, "<br>");
+        }
+      }
+      count(startingNum, endingNum);
+      document.write(`<br><hr><br>`);
+
+      // Q-8
+      document.write(
+        `Q-8   Write a nested function that computes hypotenuse of a 
+        right angle triangle. .<br><br>`
+      );
+      let base = 25;
+      let perpendicular = 35;
+      function calculateHypotenuse(base, perpendicular) {
+        function calculateSquare(x) {
+          return x * x;
+        }
+        let hypotenuse2 = Math.sqrt(
+          calculateSquare(base) + calculateSquare(perpendicular)
+        );
+        return hypotenuse2.toFixed(5);
+      }
+      document.write(
+        `The Base is: ${base} <br> The perpendicular is : ${perpendicular} <br> Hypotenuse :`,
+        calculateHypotenuse(base, perpendicular)
+      );
+      document.write(`<br><hr><br>`);
+
+      // Q-9
+      document.write(
+        `Q-9  Write a function that calculates the area of a rectangle.<br><br>`
+      );
+      function calculateRectangle(width, height) {
+        let areaOfRect = width * height;
+        return areaOfRect;
+      }
+      let width = 5;
+      let height = 10;
+      document.write(
+        `The Height of Rectangle : ${height} <br>The Width of Rectangle : ${width} <br> The Rectangle :`,
+        calculateRectangle(height, width)
+      );
+      document.write(`<br><hr><br>`);
+
+      // Q-10
+      document.write(`Q-10 Write a JavaScript function that checks whether a passed 
+        string is palindrome or not?<br><br>`);
+      let enterStr = prompt("Enter Word to see its Palindrome Or Not!!");
+      function checkPalindrome(enterStr) {
+        let reverseStr = enterStr.split("").reverse("").join("");
+        if (enterStr === reverseStr) {
+          document.write(
+            `Yes It's <b>Palindrome</b> Word <b> ${enterStr.toUpperCase()} </b></br>`
+          );
+        } else {
+          document.write(
+            `No It's Not a  <b>Palindrome</b> Word <b> ${enterStr.toUpperCase()} </b></br>`
+          );
+        }
+      }
+      checkPalindrome(enterStr);
+
+      document.write(`<br><hr><br>`);
+
+      // Q-11
+      document.write(
+        `Q-11  Write a JavaScript function that accepts a string as a 
+         parameter and converts the first letter of each word of the 
+         string in upper case. <br><br>`
+      );
+      let str = prompt("Enter sentence i\"ll show it's Title Case");
+      document.write(`The Real One : <b>${str}</b> <br>`);
+      function titleCase(str) {
+        var sentence = str.toLowerCase().split(" ");
+        for (var i = 0; i < sentence.length; i++) {
+          sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+        }
+
+        document.write(sentence.join(" "));
+        return sentence;
+      }
+      document.write(`The Title Case : `);
+      titleCase(str);
+      document.write(`<br><hr><br>`);
+
+      // Q-12
+      document.write(
+        `Q-12   Write a JavaScript function that accepts a string as a 
+         parameter and find the longest word within the string.<br><br>`
+      );
+
+      let userInput = prompt(
+        'Enter sentence i"ll find longest word in sentence'
+      );
+      document.write(`The Sentence : <b> ${userInput}</b> <br>`);
+      function findLongestWord(userInput) {
+        let word = userInput.split(" ");
+        console.log(word);
+        let longestWord = "";
+        for (let i = 0; i < word.length; i++) {
+          const element = word[i];
+          if (element.length > longestWord.length) {
+            longestWord = element;
+          }
+        }
+        return longestWord;
+      }
+      document.write(
+        `The Longest Word In Sentence : <b>`,
+        findLongestWord(userInput),
+        "</b><br>"
+      );
+
+      document.write(`<br><hr><br>`);
+
+      // Q-13
+      document.write(
+        `Q-13 Write a JavaScript function that accepts two arguments, a 
+        string and a letter and the function will count the number of 
+        function | JAVASCRIPT Page 3 of 4 occurrences of the specified letter within the string.Sample arguments : 'JSResourceS.com', 'o'.<br><br>`
+      );
+      function countLetterOccurrences(str, countLetter) {
+        document.write(`The word is : <b>${str}</b><br>`);
+        document.write(`The Letter is : <b>${countLetter}</b><br>`);
+        let word = str.split("");
+        console.log(word);
+        let res = 0;
+        for (let i = 0; i < word.length; i++) {
+          const element = word[i];
+          if (element === countLetter) {
+            res++;
+          }
+        }
+        document.write(`This Character Occurs : <b>${res}</b> <br>`);
+        return res;
+      }
+      countLetterOccurrences("JSResourceS.com", "o");
+
+      document.write(`<br><hr><br>`);
+
+      // Q-14
+      document.write(
+        `Q-14 Create 2 functions that calculate properties of a circle, using 
+        the definitions here..<br><br>`
+      );
+
+      let circleRadius = 20;
+      document.write(
+        `The Value of Circle Radius : <b>${circleRadius}</b></br>`
+      );
+      function calcCircumference(circleRadius) {
+        let res = 2 * 3.14159 * circleRadius;
+        return document.write(
+          `The circumference is NN : <b>${res}</b> </br></br>`
+        );
+      }
+      calcCircumference(circleRadius);
+      let areaRadius = 5;
+      document.write(`The Value of Area Radius : <b>${areaRadius}</b></br>`);
+      function calcArea(radius) {
+        let res2 = 3.14159 * radius * radius;
+        return document.write(`The area is NN : <b>${res2}</b> </br>`);
+      }
+      calcArea(areaRadius);
+    </script>
+    <h2>The End</h2>
+  </body>
+</html>
